@@ -1,0 +1,55 @@
+﻿@charset "utf-8";
+
+/* 基本レイアウト ここから↓ */
+@import url(common.css);
+#header {
+	width: 810px;
+	height: 95px;
+	margin: 0 auto 30px auto;
+	position: relative;
+	overflow: hidden;
+}
+#header h1 {
+	margin: 25px 0 25px 18px;
+	float: left;
+	position: absolute;
+}
+#nav {
+	margin: 25px 0 25px 25px;
+	float: right;
+}
+#nav ul {
+	list-style-type: none;
+	padding: 0;
+	overflow: hidden;
+}
+#nav ul li {
+	margin-right: 20px;
+	float: left;
+}
+#footer {
+	width: 810px;
+	height: 55px;
+	margin: 0 auto 0 auto;
+	background-image: url(../images/footer.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#footer p {
+	margin-bottom: 0;
+	padding: 17px 0 17px 0;
+	text-align: center;
+}
+/* 基本レイアウト ここまで↑ */
+
+/* 「イロハ英語教室について」ページ ここから↓ */
+
+/* 「イロハ英語教室について」ページ ここまで↑ */
+
+/* 「コース紹介」ページ ここから↓ */
+
+/* 「コース紹介」ページ ここまで↑ */
+
+/* 「見学お申込み」ページ ここから↓ */
+
+/* 「見学お申込み」ページ ここまで↑ */

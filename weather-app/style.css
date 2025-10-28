@@ -1,32 +1,154 @@
 body {
     font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-color: #f0f4f8;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-.weather-container {
-    background-color: #ffffff;
-    padding: 20px 40px;
+.container {
+    display: flex;
+    flex-wrap: wrap; /* 画面が狭い場合は折り返す */
+    gap: 20px; /* 要素間の隙間 */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 地図コンテナ */
+.map-container {
+    flex: 1; /* 横幅の比率 */
+    min-width: 300px;
+    background: #fff;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-#weather-info {
-    font-size: 1.2rem;
+.map-container img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
-#weather-info .temperature {
-    font-size: 2.5rem;
+/* 天気セクション */
+.weather-section {
+    flex: 2; /* 天気予報の幅を地図の2倍に */
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 都市選択コントロール */
+.controls {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.controls label {
     font-weight: bold;
+    margin-right: 10px;
+}
+
+.controls select {
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* 天気表示コンテナ */
+#weather-container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#city-name {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
     color: #333;
 }
 
-#weather-info .description {
+/* 現在の天気 */
+#current-weather {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#current-weather h3 {
+    margin: 0 0 10px 0;
+    color: #555;
+}
+
+#current-weather .temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0 0 0;
+}
+
+#current-weather .description {
     font-size: 1.5rem;
     color: #555;
-    margin-top: 10px;
+    margin: 5px 0 0 0;
+}
+
+/* 週間天気 */
+h2 {
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#weekly-forecast {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto; /* スマホなどで横スクロール可能に */
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.forecast-day {
+    flex: 1; /* 各曜日が均等な幅を持つ */
+    min-width: 95px; /* 最小幅を指定 */
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.forecast-day .date {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #333;
+    white-space: nowrap; /* 日付が改行されないように */
+}
+
+.forecast-day .icon {
+    font-size: 2rem; /* 天気コードの絵文字サイズ */
+    margin: 10px 0;
+}
+
+.forecast-day .temp-max {
+    font-weight: bold;
+    color: #e63946; /* 最高気温 (赤系) */
+    font-size: 0.95rem;
+}
+
+.forecast-day .temp-min {
+    color: #1d3557; /* 最低気温 (青系) */
+    font-size: 0.95rem;
 }

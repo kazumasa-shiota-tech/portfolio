@@ -3,15 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お天気情報</title>
+    <title>週間お天気情報</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="weather-container">
-        <h1>東京の現在の天気</h1>
-        <div id="weather-info">
-            <p>データを読み込み中...</p>
+    <div class="container">
+        <div class="map-container">
+            <h2>日本地図</h2>
+            
+            <p>（上のドロップダウンから都市を選択してください）</p>
+        </div>
+
+        <div class="weather-section">
+            
+            <div class="controls">
+                <label for="city-selector">都市を選択:</label>
+                <select id="city-selector">
+                    <option value="tokyo" data-lat="35.6895" data-lon="139.6917">東京</option>
+                    <option value="osaka" data-lat="34.6937" data-lon="135.5023">大阪</option>
+                    <option value="sapporo" data-lat="43.0618" data-lon="141.3545">札幌</option>
+                    <option value="fukuoka" data-lat="33.5904" data-lon="130.4017">福岡</option>
+                    <option value="nagoya" data-lat="35.1815" data-lon="136.9066">名古屋</option>
+                    <option value="sendai" data-lat="38.2682" data-lon="140.8694">仙台</option>
+                    <option value="naha" data-lat="26.2123" data-lon="127.6792">那覇</option>
+                </select>
+            </div>
+            
+            <div id="weather-container">
+                <h1 id="city-name">都市の天気</h1>
+                
+                <div id="current-weather">
+                    <p>データを読み込み中...</p>
+                </div>
+                
+                <h2>週間天気予報</h2>
+                <div id="weekly-forecast">
+                    </div>
+            </div>
         </div>
     </div>
 

@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+}
+
+.weather-container {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#weather-info {
+    font-size: 1.2rem;
+}
+
+#weather-info .temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#weather-info .description {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 10px;
+}
